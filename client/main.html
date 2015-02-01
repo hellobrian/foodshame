@@ -5,28 +5,39 @@
 
 <body>
   <header class="navbar" role="navigation">
-    <ul>
+    <ul class="flex-container">
       <li class="food-shame__logo-container">
         <a class="nav-item" href="/">FoodShame</a>
       </li>
+      {{#if currentUser}}
+      <li><a href="#">{{currentUser.profile.name}}</a></li>
+      {{/if}}
       <li>{{>loginButtons}}</li>
     </ul>
   </header>
   
-  {{> takePhoto}}
-  {{> list}}
+  <section class="main">
+    {{>photosList}}
+    <!-- {{> list}} -->
+  </section>
+
+  <section class="sub-nav">
+    {{> takePhoto}}  
+  </section>
 </body>
 
-<template name="list">
+<!-- <template name="list">
   <ul>
   {{#each userInCollection}}
     <li><img src="{{services.twitter.profile_image_url}}" alt="profile_image"> {{profile.name}} <a href="http://www.twitter.com/{{services.twitter.screenName}}">(@{{services.twitter.screenName}})</a></li>
   {{/each}}
   </ul>
-</template>
+</template> -->
 
 <template name="takePhoto">
-  <p><input type="button" class="capture" value="Take Photo"></p>
-  <p><img src="{{photo}}" alt=""></p>
-  <p>{{location}}</p>
+  <div class="photo-button__container">
+    <input type="button" class="capture" value="Photo">
+  </div>
+  <!-- <p><img src="{{photo}}" alt=""></p> -->
+  <!-- <p>{{location}}</p> -->
 </template>

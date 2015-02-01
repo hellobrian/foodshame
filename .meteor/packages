@@ -10,5 +10,5 @@ insecure
 mdg:camera
 mdg:geolocation
 accounts-twitter
-accounts-ui
 fourseven:scss@=0.9.6
+accounts-ui-unstyled
