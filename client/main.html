@@ -1,9 +1,18 @@
 <head>
   <title>foodshame</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  {{> loginButtons}}
+  <header class="navbar" role="navigation">
+    <ul>
+      <li class="food-shame__logo-container">
+        <a class="nav-item" href="/">FoodShame</a>
+      </li>
+      <li>{{>loginButtons}}</li>
+    </ul>
+  </header>
+  
   {{> takePhoto}}
   {{> list}}
 </body>

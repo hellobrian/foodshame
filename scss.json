@@ -1,0 +1,4 @@
+{ 
+  "includePaths": [ "client/styles/scss/**/*.scss" ],
+  "enableAutoprefixer": true
+}
