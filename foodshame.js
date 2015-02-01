@@ -25,4 +25,10 @@ if (Meteor.isClient) {
       return Session.get('location');
     }
   });
+
+  Template.list.helpers({
+    userInCollection: function() {
+      return Meteor.users.find();
+    }
+  });
 }

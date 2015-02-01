@@ -3,8 +3,18 @@
 </head>
 
 <body>
+  {{> loginButtons}}
   {{> takePhoto}}
+  {{> list}}
 </body>
+
+<template name="list">
+  <ul>
+  {{#each userInCollection}}
+    <li><img src="{{services.twitter.profile_image_url}}" alt="profile_image"> {{profile.name}} <a href="http://www.twitter.com/{{services.twitter.screenName}}">(@{{services.twitter.screenName}})</a></li>
+  {{/each}}
+  </ul>
+</template>
 
 <template name="takePhoto">
   <p><input type="button" class="capture" value="Take Photo"></p>
