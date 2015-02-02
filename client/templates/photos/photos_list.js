@@ -1,3 +1,6 @@
 Template.photosList.helpers({
-  photos: photosData
+  // photos: photosData
+  photos: function () {
+    return Photos.find();
+  }
 });
